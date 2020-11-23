@@ -1,7 +1,17 @@
 {
-  "name": "elearning",
+  "name": "donategifts-frontend",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/donategifts/donategifts-frontend.git"
+  },
+  "author": "Stacy Sealky Lee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/donategifts/donategifts-frontend/issues"
+  },
+  "main": "build/index.js",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
