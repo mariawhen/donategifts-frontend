@@ -4,8 +4,6 @@ module.exports = {
   },
   plugins: ['prettier', 'unicorn'],
   extends: [
-    'react-app',
-    'react-app/jest',
     'airbnb-typescript',
     'plugin:@typescript-eslint/recommended',
     'prettier',
@@ -96,6 +94,12 @@ module.exports = {
     '@typescript-eslint/camelcase': 'off',
 
     '@typescript-eslint/explicit-member-accessibility': 0,
+
+    'react/jsx-props-no-spreading': 0,
+
+    'react/no-unused-prop-types': 0,
+
+    'react/destructuring-assignment': 0,
 
     indent: [2],
     // Allow unresolved imports
