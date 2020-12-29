@@ -22,19 +22,35 @@ export default function User(props: { users: IAPIUser[] }): JSX.Element {
   return (
     <div>
       {props.users.map((user) => (
-        <p key={user._id}>{`${user.fName} ${user.lName}`}</p>
+        <p key={user._id}>{`${JSON.stringify(user, null, 3)}`}</p>
       ))}
     </div>
   );
 }
 
 export async function getStaticProps(_context): Promise<any> {
-  const res = await fetch(
-    `${process.env.BASE_HOST || 'http://localhost:3010'}/website-api/user/get-users`,
-  );
-  const data = await res.json();
+  try {
+    const res = await fetch(
+      `${process.env.BASE_HOST || 'http://localhost:3010'}/website-api/user/get-users`,
+    );
+    const data = await res.json();
 
-  if (!data || data.length < 1) {
+    if (!data || data.length < 1) {
+      return {
+        redirect: {
+          destination: '/',
+          permanent: false,
+        },
+      };
+    }
+
+    return {
+      props: {
+        users: data,
+      },
+    };
+  } catch (error) {
+    console.log(error.toString());
     return {
       redirect: {
         destination: '/',
@@ -42,10 +58,4 @@ export async function getStaticProps(_context): Promise<any> {
       },
     };
   }
-
-  return {
-    props: {
-      users: data,
-    },
-  };
 }

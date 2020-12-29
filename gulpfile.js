@@ -14,4 +14,4 @@ task('cleanNext', () =>
 
 exports.superclean = parallel('cleanNext', 'cleanTmp', 'cleanModules');
 
-exports.clean = parallel('cleanDist', 'cleanTmp');
+exports.clean = parallel('cleanNext', 'cleanTmp');
