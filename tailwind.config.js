@@ -32,6 +32,7 @@ module.exports = {
 			// default font-families, adapt to what we need
 			crayoncrumble: ['DK-Crayon-Crumble'],
 			crayoncool: ['DK-Cool-Crayon'],
+			quicksand: ['Quicksand'],
 			sans: [
 				'system-ui',
 				'BlinkMacSystemFont',
@@ -57,7 +58,6 @@ module.exports = {
 				'Liberation Serif',
 				'Georgia',
 				'serif',
-				'Quicksand',
 			],
 			mono: ['Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
 		},
