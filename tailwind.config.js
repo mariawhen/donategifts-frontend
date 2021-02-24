@@ -1,11 +1,19 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
 	purge: ['./components/**/*.{js,ts,jsx,tsx}', './pages/**/*.{js,ts,jsx,tsx}'],
 	darkMode: false, // or 'media' or 'class'
 	important: false,
 	separator: ':',
 	theme: {
-		extend: {},
+		extend: {
+			backgroundImage: (theme) => ({
+				authform: 'url("assets/img/gift-white-bg.jpeg")',
+			}),
+			transitionDuration: ['hover', 'focus'],
+		},
 		colors: {
+			...defaultTheme.colors,
 			'color-text': '#343a40',
 			'color-text-hover': '#ff5c6f',
 
@@ -16,10 +24,14 @@ module.exports = {
 			'color-dark': '#313131',
 
 			'color-white': '#fff',
-			transparent: 'transparent',
+			'color-signup': '#FFC19C',
+			'form-primary': '#FF5F6D',
+			'form-secondary': '#ffc371',
 		},
 		fontFamily: {
 			// default font-families, adapt to what we need
+			crayoncrumble: ['DK-Crayon-Crumble'],
+			crayoncool: ['DK-Cool-Crayon'],
 			sans: [
 				'system-ui',
 				'BlinkMacSystemFont',
@@ -45,22 +57,23 @@ module.exports = {
 				'Liberation Serif',
 				'Georgia',
 				'serif',
-				'Quicksand'
+				'Quicksand',
 			],
 			mono: ['Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
 		},
 		fontSize: {
+			...defaultTheme.fontSize,
 			// set our font sizes here e.g. '2xs': '0.625rem'
-			'2xs': '',
-			xs: '',
-			sm: '',
-			base: '',
-			lg: '1.15em',
-			xl: '1.2em',
-			'2xl': '',
-			'3xl': '',
-			'4xl': '',
-			'5xl': '',
+			// '2xs': '',
+			// xs: '',
+			// sm: '',
+			// base: '',
+			// lg: '1.15em',
+			// xl: '1.2em',
+			// '2xl': '',
+			// '3xl': '',
+			// '4xl': '',
+			// '5xl': '',
 		},
 		borderColor: (theme) => ({
 			// apply our colors to border colors as well
@@ -83,7 +96,7 @@ module.exports = {
 		borderRadius: ['responsive'],
 		borderStyle: ['responsive'],
 		borderWidth: ['responsive'],
-		cursor: ['responsive'],
+		cursor: ['responsive', 'hover'],
 		display: ['responsive'],
 		flexDirection: ['responsive'],
 		flexWrap: ['responsive'],
