@@ -15,14 +15,15 @@ import {
 	authBtnClass,
 } from './AuthHelpers';
 
-const onSubmit = (data) => {
-	console.log(data);
-};
-
 export default function LoginForm(): JSX.Element {
 	const { register, handleSubmit, errors } = useForm({
 		resolver: loginResolver,
 	});
+
+	// eslint-disable-next-line unicorn/consistent-function-scoping
+	const onSubmit = (data) => {
+		console.log(data);
+	};
 
 	return (
 		<div className={formContainerClass}>

@@ -23,7 +23,7 @@ interface IPartnerModalBody {
 	toggleModal: () => void;
 }
 
-export default function PartnerModal(Props: IPartnerModalBody): JSX.Element {
+export default function PartnerModal(props: IPartnerModalBody): JSX.Element {
 	return (
 		<div className={modalContainerClass}>
 			<div className={modalTitleContainerClass}>
@@ -37,8 +37,8 @@ export default function PartnerModal(Props: IPartnerModalBody): JSX.Element {
 					className={modalCloseClass}
 					role="button"
 					tabIndex={0}
-					onClick={() => Props.toggleModal()}
-					onKeyDown={() => Props.toggleModal()}
+					onClick={() => props.toggleModal()}
+					onKeyDown={() => props.toggleModal()}
 				>
 					Close
 				</div>

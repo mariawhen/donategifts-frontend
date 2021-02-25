@@ -30,11 +30,11 @@ export default function RegisterForm(Props: IRegisterFormProps): JSX.Element {
 	});
 	const router = useRouter();
 
-	// eslint-disable-next-line unicorn/consistent-function-scoping
-	const onSubmit = (data) => {
+	const onSubmit = (data: { userRole: string }) => {
 		const { userRole } = data;
-		// eslint-disable-next-line no-console
+
 		console.log(data);
+
 		if (userRole === 'agency') {
 			router.push('/');
 		}
