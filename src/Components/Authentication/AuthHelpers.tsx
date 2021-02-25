@@ -2,8 +2,8 @@ import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 
 const registerFormSchema = yup.object().shape({
-	fName: yup.string().required(),
-	lName: yup.string().required(),
+	firstName: yup.string().required(),
+	lastName: yup.string().required(),
 	email: yup.string().required().email(),
 	password: yup.string().required().min(8, 'Passwords must at least be 8 characters long'),
 	passwordConfirm: yup

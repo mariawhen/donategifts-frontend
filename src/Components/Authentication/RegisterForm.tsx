@@ -61,26 +61,26 @@ export default function RegisterForm(Props: IRegisterFormProps): JSX.Element {
 					<div className={inputContainerClass}>
 						<input
 							type="text"
-							name="fName"
+							name="firstName"
 							ref={register}
 							placeholder="First name"
 							className={inputClass}
 						/>
 					</div>
-					<p className={errorClass}>{errors.fName?.message}</p>
+					<p className={errorClass}>{errors.firstName?.message}</p>
 				</div>
 
 				<div className={formGroupClass}>
 					<div className={inputContainerClass}>
 						<input
 							type="text"
-							name="lName"
+							name="lastName"
 							ref={register}
 							placeholder="Last name"
 							className={inputClass}
 						/>
 					</div>
-					<p className={errorClass}>{errors.lName?.message}</p>
+					<p className={errorClass}>{errors.lastName?.message}</p>
 				</div>
 
 				<div className={formGroupClass}>
