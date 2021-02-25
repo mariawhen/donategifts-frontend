@@ -12,7 +12,7 @@ export default function Register(): JSX.Element {
 
 	return (
 		<>
-			<Modal Body={() => <PartnerModal toggleModal={toggleModal} />} isVisible={modalDisplay} />
+			<Modal body={() => <PartnerModal toggleModal={toggleModal} />} isVisible={modalDisplay} />
 			<RegisterForm toggleModal={toggleModal} modalDisplay={modalDisplay} />
 		</>
 	);

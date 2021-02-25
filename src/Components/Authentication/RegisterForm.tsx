@@ -24,7 +24,7 @@ interface IRegisterFormProps {
 	toggleModal: () => void;
 }
 
-export default function RegisterForm(Props: IRegisterFormProps): JSX.Element {
+export default function RegisterForm(props: IRegisterFormProps): JSX.Element {
 	const { register, handleSubmit, errors } = useForm({
 		resolver: registerResolver,
 	});
@@ -141,7 +141,7 @@ export default function RegisterForm(Props: IRegisterFormProps): JSX.Element {
 							type="radio"
 							className={radioClass}
 							value="agency"
-							onClick={() => Props.toggleModal()}
+							onClick={() => props.toggleModal()}
 						/>
 						<p className={radioLabelContainer}>Foster Care Partner</p>
 					</div>

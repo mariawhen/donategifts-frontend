@@ -2,7 +2,7 @@ import React from 'react';
 
 export interface IModalProps {
 	isVisible: boolean;
-	Body: () => JSX.Element;
+	body: () => JSX.Element;
 }
 
 const modalClass =
@@ -18,7 +18,7 @@ export default function Modal(props: IModalProps): JSX.Element {
 			aria-hidden="true"
 		>
 			<div className={modalChildClass}>
-				<props.Body />
+				<props.body />
 			</div>
 		</div>
 	);
