@@ -2,21 +2,24 @@ import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 
 const registerFormSchema = yup.object().shape({
-	firstName: yup.string().required(),
-	lastName: yup.string().required(),
-	email: yup.string().required().email(),
-	password: yup.string().required().min(8, 'Passwords must at least be 8 characters long'),
+	firstName: yup.string().required('First Name is required'),
+	lastName: yup.string().required('Last Name is required'),
+	email: yup.string().required('Email is required').email(),
+	password: yup
+		.string()
+		.required('Password is required')
+		.min(8, 'Passwords must at least be 8 characters long'),
 	passwordConfirm: yup
 		.string()
 		.test('password-match', 'Passwords do not match', function match(value) {
 			return this.parent.password === value;
 		}),
-	userRole: yup.string().required(),
+	userRole: yup.string().required('Please select a User Role').nullable(),
 });
 
 const loginFormSchema = yup.object().shape({
-	email: yup.string().required().email(),
-	password: yup.string().required(),
+	email: yup.string().required('Email is required').email(),
+	password: yup.string().required('Password is required'),
 });
 
 export const registerResolver = yupResolver(registerFormSchema);
