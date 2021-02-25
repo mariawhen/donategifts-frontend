@@ -1,11 +1,11 @@
 import React from 'react';
-import RegisterForm from '@/Components/Authentication/RegisterForm';
 import BaseLayout from '@/Components/Layout/BaseLayout';
+import Register from '@/Components/Authentication/Register';
 
 export default function Signup(): JSX.Element {
 	return (
 		<BaseLayout pageTitle="Sign Up">
-			<RegisterForm />
+			<Register />
 		</BaseLayout>
 	);
 }

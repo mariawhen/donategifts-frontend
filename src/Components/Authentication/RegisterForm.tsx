@@ -1,6 +1,7 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import {
 	errorClass,
 	formClass,
@@ -18,15 +19,25 @@ import {
 	radioLabelContainer,
 } from './AuthHelpers';
 
-export default function RegisterForm(): JSX.Element {
+interface IRegisterFormProps {
+	modalDisplay: boolean;
+	toggleModal: () => void;
+}
+
+export default function RegisterForm(Props: IRegisterFormProps): JSX.Element {
 	const { register, handleSubmit, errors } = useForm({
 		resolver: registerResolver,
 	});
+	const router = useRouter();
 
 	// eslint-disable-next-line unicorn/consistent-function-scoping
 	const onSubmit = (data) => {
+		const { userRole } = data;
 		// eslint-disable-next-line no-console
 		console.log(data);
+		if (userRole === 'agency') {
+			router.push('/');
+		}
 	};
 
 	return (
@@ -130,6 +141,7 @@ export default function RegisterForm(): JSX.Element {
 							type="radio"
 							className={radioClass}
 							value="agency"
+							onClick={() => Props.toggleModal()}
 						/>
 						<p className={radioLabelContainer}>Foster Care Partner</p>
 					</div>
