@@ -2,18 +2,15 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import Link from 'next/link';
 import {
-	errorClass,
 	formClass,
 	formContainerClass,
-	formGroupClass,
 	formHeaderClass,
-	inputClass,
-	inputContainerClass,
 	loginResolver,
 	OrClass,
 	submitBtnClass,
 	authBtnClass,
 } from './AuthHelpers';
+import { FormInput } from './FormInput';
 
 export default function LoginForm(): JSX.Element {
 	const { register, handleSubmit, errors } = useForm({
@@ -42,31 +39,21 @@ export default function LoginForm(): JSX.Element {
 					</Link>
 				</div>
 
-				<div className={formGroupClass}>
-					<div className={inputContainerClass}>
-						<input
-							type="text"
-							name="email"
-							ref={register}
-							placeholder="Email/Username"
-							className={inputClass}
-						/>
-					</div>
-					<p className={errorClass}>{errors.email?.message}</p>
-				</div>
+				<FormInput
+					type="text"
+					name="email"
+					ref={register}
+					placeholder="Email/Username"
+					errorMsg={errors.email?.message}
+				/>
 
-				<div className={formGroupClass}>
-					<div className={inputContainerClass}>
-						<input
-							name="password"
-							ref={register}
-							placeholder="Password"
-							type="password"
-							className={inputClass}
-						/>
-					</div>
-					<p className={errorClass}>{errors.password?.message}</p>
-				</div>
+				<FormInput
+					type="password"
+					name="password"
+					ref={register}
+					placeholder="Password"
+					errorMsg={errors.password?.message}
+				/>
 
 				<input type="submit" className={submitBtnClass} value="Log In" />
 			</form>

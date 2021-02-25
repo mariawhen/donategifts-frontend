@@ -8,8 +8,6 @@ import {
 	formContainerClass,
 	formGroupClass,
 	formHeaderClass,
-	inputClass,
-	inputContainerClass,
 	OrClass,
 	submitBtnClass,
 	authBtnClass,
@@ -18,6 +16,7 @@ import {
 	radioContainerClass,
 	radioLabelContainer,
 } from './AuthHelpers';
+import { FormInput } from './FormInput';
 
 interface IRegisterFormProps {
 	modalDisplay: boolean;
@@ -57,70 +56,45 @@ export default function RegisterForm(props: IRegisterFormProps): JSX.Element {
 					</Link>
 				</div>
 
-				<div className={formGroupClass}>
-					<div className={inputContainerClass}>
-						<input
-							type="text"
-							name="firstName"
-							ref={register}
-							placeholder="First name"
-							className={inputClass}
-						/>
-					</div>
-					<p className={errorClass}>{errors.firstName?.message}</p>
-				</div>
+				<FormInput
+					type="text"
+					name="firstName"
+					ref={register}
+					placeholder="First name"
+					errorMsg={errors.firstName?.message}
+				/>
 
-				<div className={formGroupClass}>
-					<div className={inputContainerClass}>
-						<input
-							type="text"
-							name="lastName"
-							ref={register}
-							placeholder="Last name"
-							className={inputClass}
-						/>
-					</div>
-					<p className={errorClass}>{errors.lastName?.message}</p>
-				</div>
+				<FormInput
+					type="text"
+					name="lastName"
+					ref={register}
+					placeholder="Last name"
+					errorMsg={errors.lastName?.message}
+				/>
 
-				<div className={formGroupClass}>
-					<div className={inputContainerClass}>
-						<input
-							type="text"
-							name="email"
-							ref={register}
-							placeholder="Email/Username"
-							className={inputClass}
-						/>
-					</div>
-					<p className={errorClass}>{errors.email?.message}</p>
-				</div>
+				<FormInput
+					type="text"
+					name="email"
+					ref={register}
+					placeholder="Email/Username"
+					errorMsg={errors.email?.message}
+				/>
 
-				<div className={formGroupClass}>
-					<div className={inputContainerClass}>
-						<input
-							name="password"
-							ref={register}
-							placeholder="Password"
-							type="password"
-							className={inputClass}
-						/>
-					</div>
-					<p className={errorClass}>{errors.password?.message}</p>
-				</div>
+				<FormInput
+					type="password"
+					name="password"
+					ref={register}
+					placeholder="Password"
+					errorMsg={errors.password?.message}
+				/>
 
-				<div className={formGroupClass}>
-					<div className={inputContainerClass}>
-						<input
-							name="passwordConfirm"
-							ref={register}
-							placeholder="Confirm Password"
-							type="password"
-							className={inputClass}
-						/>
-					</div>
-					<p className={errorClass}>{errors.passwordConfirm?.message}</p>
-				</div>
+				<FormInput
+					type="password"
+					name="passwordConfirm"
+					ref={register}
+					placeholder="Confirm Password"
+					errorMsg={errors.passwordConfirm?.message}
+				/>
 
 				<div className={formGroupClass}>
 					<p className="text-2xl text-white">Signing up as:</p>
