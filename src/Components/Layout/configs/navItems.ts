@@ -6,7 +6,7 @@ export const navItems: {
 	}[];
 } = {
 	style:
-		'quick-font font-medium text-xl font-quicksand transition duration-500 ease-in-out background-transparent px-3 py-1 outline-none focus:outline-none text-color-text hover:text-color-text-hover',
+		'font-quicksand font-medium text-xl font-quicksand transition duration-500 ease-in-out background-transparent px-3 py-1 outline-none focus:outline-none text-color-text hover:text-color-text-hover',
 	items: [
 		{
 			text: 'Wish Cards',

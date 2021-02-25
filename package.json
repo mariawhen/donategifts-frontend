@@ -19,7 +19,7 @@
 		"lint": "eslint --fix --ext .ts,.tsx --ignore-path .eslintignore src/",
 		"clean": "gulp clean",
 		"superclean": "gulp superclean",
-		"upgradeDeps": "npx ncu -u"
+		"upgradeDeps": "npx ncu -u -x react-hook-form"
 	},
 	"dependencies": {
 		"@fortawesome/fontawesome-svg-core": "^1.2.34",
@@ -32,7 +32,7 @@
 		"postcss": "^8.2.6",
 		"react": "17.0.1",
 		"react-dom": "17.0.1",
-		"react-hook-form": "^6.15.4",
+		"react-hook-form": "6.15.3",
 		"sass": "^1.32.8",
 		"tailwindcss": "^2.0.3",
 		"yup": "^0.32.9"
