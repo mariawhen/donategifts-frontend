@@ -135,8 +135,6 @@ module.exports = {
 		'plugin:@typescript-eslint/recommended',
 		'plugin:unicorn/recommended',
 		'prettier',
-		'prettier/standard',
-		'prettier/@typescript-eslint',
 	],
 	settings: {
 		'import/resolver': {

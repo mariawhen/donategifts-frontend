@@ -1,46 +1,9 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import Link from 'next/link';
 import React from 'react';
+import { breadCrumbs } from './configs/breadCrumbs';
 
 export default function Footer(): JSX.Element {
-	const breadCrumbs: {
-		link: string;
-		text: string;
-	}[] = [
-		{
-			link: '/contact',
-			text: 'Contact Us',
-		},
-		{
-			link: '/mission',
-			text: 'Mission',
-		},
-		{
-			link: '/howto',
-			text: 'How it works',
-		},
-		{
-			link: '/team',
-			text: 'Who we are',
-		},
-		{
-			link: '/wishcards',
-			text: 'Wish Cards',
-		},
-		{
-			link: '/community',
-			text: 'Community',
-		},
-		{
-			link: '/users/terms',
-			text: 'Terms',
-		},
-		{
-			link: '/faq',
-			text: 'FAQ',
-		},
-	];
-
 	return (
 		<div className="quick-font w-full bg-color-text-hover bg-color-dark p-6">
 			<p className="text-color-yellow p-2 text-lg flex justify-center">
