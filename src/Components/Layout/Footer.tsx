@@ -34,7 +34,7 @@ export default function Footer(): JSX.Element {
 					<span>|</span>
 				</div>
 				{breadCrumbs.map((item, index) => (
-					<div className="text-color-white" key="index">
+					<div className="text-color-white" key={item.text}>
 						<button type="button" className="px-2">
 							<Link href={item.link}>
 								<span className="hover:underline">{item.text}</span>
