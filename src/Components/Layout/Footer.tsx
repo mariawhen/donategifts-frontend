@@ -9,7 +9,7 @@ export default function Footer(): JSX.Element {
 			<p className="text-color-yellow p-2 text-lg flex justify-center">
 				<i className="fa fa-heart mt-1" aria-hidden />
 				<a
-					href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=LA5DA2K2C8HLW"
+					href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LA5DA2K2C8HLW"
 					rel="noreferrer"
 					title="support our organization by paypal donation"
 					target="_blank"
