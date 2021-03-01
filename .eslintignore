@@ -6,3 +6,5 @@ node_modules
 .eslintrc.js
 next.config.js
 gulpfile.js
+tailwind.config.js
+postcss.config.js
