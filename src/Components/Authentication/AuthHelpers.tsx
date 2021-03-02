@@ -47,7 +47,7 @@ export const registerAgencyResolver = yupResolver(AgencyRegisterFormSchema);
 
 export const formContainerClass = 'flex justify-center bg-authform font-quicksand';
 export const formClass =
-	'flex flex-col space-y-8 my-10 p-12 border rounded-2xl border-transparent bg-gradient-to-tr from-form-primary to-form-secondary w-11/12 md:w-9/12';
+	'flex flex-col space-y-8 my-10 p-12 border rounded-2xl border-transparent bg-gradient-to-tr from-form-primary to-form-secondary md:w-9/12';
 export const formHeaderClass =
 	'justify-center p-4 text-2xl mb-3 space-x-2 flex flex-col md:flex-row flex-wrap';
 export const formGroupClass = 'flex flex-col space-y-5';
@@ -55,10 +55,12 @@ export const inputContainerClass = 'w-full';
 export const inputClass =
 	'w-full mb-1 bg-transparent ml-2 text-2xl text-white placeholder-white placeholder-opacity-50 focus:outline-none';
 export const errorClass = 'text-sm ml-2 text-error font-semibold';
+export const inputError = 'border rounded border-error p-2';
+export const inputOk = 'border-b border-white';
 export const submitBtnClass =
-	'shadow w-2/4 py-4 font-bold self-center cursor-pointer rounded-md hover:bg-form-secondary hover:text-white duration-700 text-xl text-red-400';
+	'shadow w-2/4 py-4 font-bold self-center cursor-pointer rounded-md hover:bg-form-secondary hover:text-white duration-100 text-xl text-red-400';
 export const authBtnClass =
-	'font-crayoncrumble text-3xl hover:cursor-pointer border rounded-2xl border-transparent pt-3 px-8 pb-3 bg-color-signup text-red-400 hover:underline';
+	'font-crayoncrumble text-3xl hover:cursor-pointer border rounded-2xl border-transparent pt-3 px-8 pb-3 bg-signup text-red-400 hover:bg-signup-darker';
 export const OrClass = 'font-crayoncool self-center text-white';
 export const radioContainerClass = 'flex flex-row space-x-2 ml-2 text-xl';
 export const radioClass = 'self-start self-center';

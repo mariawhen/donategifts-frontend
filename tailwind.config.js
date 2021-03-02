@@ -14,16 +14,17 @@ module.exports = {
 		},
 		colors: {
 			...defaultTheme.colors,
-			'color-text': '#343a40',
-			'color-text-hover': '#ff5c6f',
+			primary: '#343a40',
+			'primary-hover': '#ff5c6f',
 
-			'color-grey': '#9a9a9a',
-			'color-grey-light': '#d6d6d6',
+			grey: '#9a9a9a',
+			'grey-light': '#d6d6d6',
 
-			'color-yellow': '#ffbb59',
-			'color-dark': '#313131',
+			yellow: '#ffbb59',
+			dark: '#313131',
 
-			'color-signup': '#FFC19C',
+			signup: '#FFC19C',
+			'signup-darker': '#f7cdb5',
 
 			error: '#FF0000',
 

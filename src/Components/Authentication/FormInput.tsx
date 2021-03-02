@@ -1,6 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { formGroupClass, inputContainerClass, inputClass, errorClass } from './AuthHelpers';
+import {
+	formGroupClass,
+	inputContainerClass,
+	inputClass,
+	errorClass,
+	inputError,
+	inputOk,
+} from './AuthHelpers';
 
 interface IInputProps {
 	errorMsg: string;
@@ -12,11 +19,7 @@ interface IInputProps {
 
 const FormInput = React.forwardRef<HTMLInputElement, IInputProps>((props, ref) => (
 	<div className={props.containerClass}>
-		<div
-			className={`${inputContainerClass} ${
-				props.errorMsg !== '' ? 'border rounded border-error' : 'border-b border-white'
-			}`}
-		>
+		<div className={`${inputContainerClass} ${props.errorMsg !== '' ? inputError : inputOk}`}>
 			<input
 				type={props.type}
 				name={props.name}
