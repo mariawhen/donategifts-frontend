@@ -23,8 +23,10 @@ module.exports = {
 			'color-yellow': '#ffbb59',
 			'color-dark': '#313131',
 
-			'color-white': '#fff',
 			'color-signup': '#FFC19C',
+
+			error: '#FF0000',
+
 			'form-primary': '#FF5F6D',
 			'form-secondary': '#ffc371',
 		},

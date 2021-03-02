@@ -51,10 +51,10 @@ export const formClass =
 export const formHeaderClass =
 	'justify-center p-4 text-2xl mb-3 space-x-2 flex flex-col md:flex-row flex-wrap';
 export const formGroupClass = 'flex flex-col space-y-5';
-export const inputContainerClass = 'w-full border-b border-white';
+export const inputContainerClass = 'w-full';
 export const inputClass =
 	'w-full mb-1 bg-transparent ml-2 text-2xl text-white placeholder-white placeholder-opacity-50 focus:outline-none';
-export const errorClass = 'text-sm ml-2 text-white';
+export const errorClass = 'text-sm ml-2 text-error font-semibold';
 export const submitBtnClass =
 	'shadow w-2/4 py-4 font-bold self-center cursor-pointer rounded-md hover:bg-form-secondary hover:text-white duration-700 text-xl text-red-400';
 export const authBtnClass =

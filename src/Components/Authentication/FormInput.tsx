@@ -12,7 +12,11 @@ interface IInputProps {
 
 const FormInput = React.forwardRef<HTMLInputElement, IInputProps>((props, ref) => (
 	<div className={props.containerClass}>
-		<div className={inputContainerClass}>
+		<div
+			className={`${inputContainerClass} ${
+				props.errorMsg !== '' ? 'border rounded border-error' : 'border-b border-white'
+			}`}
+		>
 			<input
 				type={props.type}
 				name={props.name}
