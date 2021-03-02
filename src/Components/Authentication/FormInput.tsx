@@ -3,14 +3,15 @@ import PropTypes from 'prop-types';
 import { formGroupClass, inputContainerClass, inputClass, errorClass } from './AuthHelpers';
 
 interface IInputProps {
-	errorMsg?: string;
+	errorMsg: string;
 	placeholder: string;
 	name: string;
 	type: string;
+	containerClass?: string;
 }
 
 const FormInput = React.forwardRef<HTMLInputElement, IInputProps>((props, ref) => (
-	<div className={formGroupClass}>
+	<div className={props.containerClass}>
 		<div className={inputContainerClass}>
 			<input
 				type={props.type}
@@ -20,7 +21,7 @@ const FormInput = React.forwardRef<HTMLInputElement, IInputProps>((props, ref) =
 				className={inputClass}
 			/>
 		</div>
-		<p className={errorClass}>{props.errorMsg}</p>
+		{props.errorMsg !== '' && <p className={errorClass}>{props.errorMsg}</p>}
 	</div>
 ));
 
@@ -29,10 +30,12 @@ FormInput.propTypes = {
 	name: PropTypes.string.isRequired,
 	placeholder: PropTypes.string.isRequired,
 	errorMsg: PropTypes.string,
+	containerClass: PropTypes.string,
 };
 
 FormInput.defaultProps = {
-	errorMsg: 'Invalid input',
+	errorMsg: '',
+	containerClass: formGroupClass,
 };
 
 export { FormInput };
