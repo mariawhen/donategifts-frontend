@@ -5,7 +5,7 @@ export default function Wishcard(): JSX.Element {
 	return (
 		<>
 			<NavBar />
-			<div>Read More Page</div>
+			<div>Wishcard detail page</div>
 		</>
 	);
 }

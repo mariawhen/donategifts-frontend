@@ -22,11 +22,11 @@ export const navItems: {
 		},
 		{
 			text: 'Sign up',
-			link: '/users/signup',
+			link: '/signup',
 		},
 		{
 			text: 'Login',
-			link: '/users/login',
+			link: '/login',
 		},
 	],
 };

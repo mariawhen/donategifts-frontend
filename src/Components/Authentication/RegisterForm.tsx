@@ -43,13 +43,13 @@ export default function RegisterForm(props: IRegisterFormProps): JSX.Element {
 		<div className={formContainerClass}>
 			<form onSubmit={handleSubmit(onSubmit)} className={formClass}>
 				<div className={formHeaderClass}>
-					<Link href="/users/signup">
+					<Link href="/signup">
 						<button type="button" className={authBtnClass}>
 							Sign Up
 						</button>
 					</Link>
 					<div className={OrClass}>OR</div>
-					<Link href="/users/login">
+					<Link href="/login">
 						<button type="button" className={authBtnClass}>
 							Login
 						</button>
