@@ -19,20 +19,41 @@ const loginFormSchema = object().shape({
 	password: string().required('Password is required'),
 });
 
+const phoneRegex = /^\d{3}-\d{3}-\d{4}$/;
+const zipRegex = /^\d{5}$/;
+
+const AgencyRegisterFormSchema = object().shape({
+	agencyName: string().required('Agency Name is Required'),
+	agencyWebsite: string(),
+	address1: string().required('Address Line 1 is Required'),
+	address2: string(),
+	city: string().required('City is Required'),
+	state: string().required('State is Required'),
+	zipcode: string()
+		.matches(zipRegex, 'Please enter a valid 5 digit zipcode')
+		.required('Zipcode is Required'),
+	country: string().required('Country is Required'),
+	agencyPhone: string()
+		.matches(phoneRegex, 'Please enter a valid Phone Number')
+		.required('Phone number is Required'),
+	agencyBio: string().required('Agency Description is Required'),
+});
+
 export const registerResolver = yupResolver(registerFormSchema);
 export const loginResolver = yupResolver(loginFormSchema);
+export const registerAgencyResolver = yupResolver(AgencyRegisterFormSchema);
 
 // AuthForm Styles
 
 export const formContainerClass = 'flex justify-center bg-authform font-quicksand';
 export const formClass =
-	'flex flex-col space-y-8 my-10 p-12 border rounded-2xl border-transparent bg-gradient-to-tr from-form-primary to-form-secondary w-9/12';
+	'flex flex-col space-y-8 my-10 p-12 border rounded-2xl border-transparent bg-gradient-to-tr from-form-primary to-form-secondary w-11/12 md:w-9/12';
 export const formHeaderClass =
 	'justify-center p-4 text-2xl mb-3 space-x-2 flex flex-col md:flex-row flex-wrap';
 export const formGroupClass = 'flex flex-col space-y-5';
-export const inputContainerClass = 'w-full border-b-2 border-white';
+export const inputContainerClass = 'w-full border-b border-white';
 export const inputClass =
-	'w-full mb-1 bg-transparent ml-2 text-2xl text-white placeholder-white placeholder-opacity-50';
+	'w-full mb-1 bg-transparent ml-2 text-2xl text-white placeholder-white placeholder-opacity-50 focus:outline-none';
 export const errorClass = 'text-sm ml-2 text-white';
 export const submitBtnClass =
 	'shadow w-2/4 py-4 font-bold self-center cursor-pointer rounded-md hover:bg-form-secondary hover:text-white duration-700 text-xl text-red-400';
@@ -55,3 +76,17 @@ export const blockRowClass = 'flex flex-col space-y-2';
 export const blockColumnClass = 'flex flex-row space-x-2';
 export const block = 'h-1/2 w-11/12';
 export const bodyIconClass = 'fill-current text-red-400 mr-2';
+
+// Agency/Partner Registration Form Styles
+
+export const agencyFormHeaderClass = 'font-crayoncrumble text-3xl font-bold text-center text-white';
+export const cityStateZipContainerClass =
+	'flex flex-col space-y-8 md:space-y-0 md:flex-row md:space-x-2';
+export const cityGroupClass = `${formGroupClass} md:w-3/5`;
+export const stateGroupClass = `${formGroupClass} md:w-1/5`;
+export const zipcodeGroupClass = `${formGroupClass} md:w-1/5`;
+export const countryPhoneContainerClass =
+	'flex flex-col space-y-8 md:space-y-0 md:flex-row md:space-x-2';
+export const countryGroupClass = `${formGroupClass} md:w-1/2`;
+export const phoneGroupClass = `${formGroupClass} md:w-1/2`;
+export const agencyBioInputClass = `${inputClass} h-44`;
