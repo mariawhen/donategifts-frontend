@@ -27,7 +27,7 @@ export const breadCrumbs: {
 		text: 'Community',
 	},
 	{
-		link: '/users/terms',
+		link: '/terms',
 		text: 'Terms',
 	},
 	{
