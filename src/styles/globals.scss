@@ -22,7 +22,13 @@ html {
 			min-height: 100vh;
 			height: 100px;
 			background-size: cover;
-			background: no-repeat center/100% url('/assets/img/new-hero.png');
+			background: no-repeat center/100% url('../../public/assets/img/new-hero.png');
+		}
+
+		#navbar-toggler-item {
+			width: 30px;
+			height: 30px;
+			background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 		}
 	}
 }
@@ -30,11 +36,11 @@ html {
 @font-face {
 	font-family: 'DK-Crayon-Crumble';
 	font-weight: 400;
-	src: url('../../assets/fonts/dk-crayon-crumble-webfont.woff') format('woff');
+	src: url('../../public/assets/fonts/dk-crayon-crumble-webfont.woff') format('woff');
 }
 
 @font-face {
 	font-family: 'DK-Cool-Crayon';
 	font-weight: 400;
-	src: url('../../assets/fonts/dkcoolcrayon-webfont.woff') format('woff');
+	src: url('../../public/assets/fonts/dkcoolcrayon-webfont.woff') format('woff');
 }
