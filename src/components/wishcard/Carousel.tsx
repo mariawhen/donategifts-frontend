@@ -1,4 +1,4 @@
-// Wishcard carousel on front/home page
+// wishcard carousel on front/home page
 import React from 'react';
 
 export default function Carousel(): JSX.Element {

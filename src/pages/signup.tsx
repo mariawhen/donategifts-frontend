@@ -1,6 +1,6 @@
 import React from 'react';
-import BaseLayout from '@/Components/Layout/BaseLayout';
-import Register from '@/Components/Authentication/Register';
+import BaseLayout from '@/components/layout/BaseLayout';
+import Register from '@/components/authentication/Register';
 
 export default function SignUp(): JSX.Element {
 	return (

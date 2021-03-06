@@ -1,5 +1,5 @@
 import React from 'react';
-import BaseLayout from '@/Components/Layout/BaseLayout';
+import BaseLayout from '@/components/layout/BaseLayout';
 
 export default function Faq(): JSX.Element {
 	return (

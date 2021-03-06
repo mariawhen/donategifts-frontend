@@ -1,6 +1,6 @@
 import React from 'react';
-import BaseLayout from '@/Components/Layout/BaseLayout';
-import AgencyRegisterForm from '@/Components/Authentication/AgencyRegisterForm';
+import BaseLayout from '@/components/layout/BaseLayout';
+import AgencyRegisterForm from '@/components/authentication/AgencyRegisterForm';
 
 export default function AgencySignUp(): JSX.Element {
 	return (

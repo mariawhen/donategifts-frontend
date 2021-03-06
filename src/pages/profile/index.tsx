@@ -1,5 +1,5 @@
 import React from 'react';
-import NavBar from '@/Components/Layout/NavBar';
+import NavBar from '@/components/layout/NavBar';
 
 export default function Index(): JSX.Element {
 	return (

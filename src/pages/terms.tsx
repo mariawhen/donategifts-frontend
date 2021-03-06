@@ -1,4 +1,4 @@
-import BaseLayout from '@/Components/Layout/BaseLayout';
+import BaseLayout from '@/components/layout/BaseLayout';
 import React from 'react';
 
 export default function Terms(): JSX.Element {

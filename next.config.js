@@ -5,7 +5,6 @@ function getAPIHost() {
 	const env = process.env.NODE_ENV;
 
 	if (env === 'development') {
-		console.log('API RUNNING ON: http://localhost:3010/website-api');
 		return 'http://localhost:3010/website-api';
 	}
 

@@ -29,9 +29,9 @@ export default function AgencyRegisterForm(): JSX.Element {
 	});
 	const router = useRouter();
 
-	const onSubmit = (data) => {
+	const onSubmit = async (data) => {
 		console.log(data);
-		router.push('/');
+		await router.push('/');
 	};
 
 	return (

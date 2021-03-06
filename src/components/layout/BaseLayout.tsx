@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-import NavBar from '@/Components/Layout/NavBar';
-import Footer from '@/Components/Layout/Footer';
+import NavBar from '@/components/layout/NavBar';
+import Footer from '@/components/layout/Footer';
 
 export default function BaseLayout({
 	children,
