@@ -8,7 +8,7 @@ module.exports = {
 	theme: {
 		extend: {
 			backgroundImage: (theme) => ({
-				authform: 'url("/public/assets/img/gift-white-bg.jpeg")',
+				authform: 'url("/assets/img/gift-white-bg.jpeg")',
 			}),
 			transitionDuration: ['hover', 'focus'],
 		},
