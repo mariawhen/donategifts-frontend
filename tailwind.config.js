@@ -9,8 +9,15 @@ module.exports = {
 		extend: {
 			backgroundImage: (theme) => ({
 				authform: 'url("/assets/img/gift-white-bg.jpeg")',
+				mission: 'url("/assets/img/kid-yellow-bg.jpg")'
 			}),
 			transitionDuration: ['hover', 'focus'],
+		},
+		minHeight: {
+			4: '40vh'
+		},
+		boxShadow: {
+			mission: '20px 20px rgba(255, 187, 89, 1)'
 		},
 		colors: {
 			...defaultTheme.colors,

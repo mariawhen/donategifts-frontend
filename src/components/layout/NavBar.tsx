@@ -9,7 +9,7 @@ function toggleMenu() {
 
 export default function NavBar(): JSX.Element {
 	return (
-		<nav className="flex flex-wrap justify-between lg:mx-28 my-6 sm:mx-10 z-10 bg-white">
+		<nav className="flex flex-wrap justify-between my-2 z-10 bg-white">
 			<div id="logo" className="lg:w-1/3 flex justify-center">
 				<div className="flex items-center">
 					<Link href="/">
@@ -28,7 +28,7 @@ export default function NavBar(): JSX.Element {
 				</div>
 			</div>
 
-			<div className="block lg:hidden">
+			<div className="block lg:hidden my-auto mr-7">
 				<button
 					type="button"
 					id="nav-toggle"
@@ -43,7 +43,7 @@ export default function NavBar(): JSX.Element {
 				id="nav-content"
 				className="w-full flex-grow lg:flex lg:self-center justify-center hidden lg:block pt-6 lg:pt-0 lg:w-2/3"
 			>
-				<ul className="lg:flex justify-end sm:text-right flex-1 items-center">
+				<ul className="lg:flex justify-end sm:text-right items-center">
 					{navItems.items.map((item) => (
 						<li key={item.text}>
 							<Link href={item.link}>
