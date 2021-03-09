@@ -1,13 +1,45 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { navItems } from './configs/navItems';
 
 function toggleMenu() {
 	document.querySelector('#nav-content').classList.toggle('hidden');
 }
 
 export default function NavBar(): JSX.Element {
+	const navItems: {
+		style: string;
+		items: {
+			text: string;
+			link: string;
+		}[];
+	} = {
+		style:
+			'font-quicksand font-medium text-xl font-quicksand transition ease-in-out background-transparent px-3 py-1 outline-none focus:outline-none text-primary hover:text-primary-hover',
+		items: [
+			{
+				text: 'Wish Cards',
+				link: '/wishcards',
+			},
+			{
+				text: 'Mission',
+				link: '/mission',
+			},
+			{
+				text: 'How To',
+				link: '/howto',
+			},
+			{
+				text: 'Sign up',
+				link: '/signup',
+			},
+			{
+				text: 'Login',
+				link: '/login',
+			},
+		],
+	};
+
 	return (
 		<nav className="flex flex-wrap justify-between my-2 z-10 bg-white">
 			<div id="logo" className="lg:w-1/3 flex justify-center">
