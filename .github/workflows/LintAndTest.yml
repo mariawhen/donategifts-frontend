@@ -17,7 +17,7 @@ env:
   NODE_VERSION: '15'
 
 jobs:
-  LintAndText:
+  lint:
     if: github.event.pull_request.draft == false
     runs-on: ubuntu-latest
     steps:
@@ -28,4 +28,15 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
       - run: npm ci
       - run: npm run lint
+
+  test:
+    if: github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Node.js
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - run: npm ci
       - run: npm run test
