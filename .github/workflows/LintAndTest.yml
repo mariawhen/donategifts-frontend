@@ -3,14 +3,15 @@
 name: Lint and Test
 
 on:
-  types:
-      - assigned
-      - opened
-      - synchronize
-      - reopened
-      - ready_for_review
-    branches:
-      - master
+  pull_request:
+    types:
+        - assigned
+        - opened
+        - synchronize
+        - reopened
+        - ready_for_review
+      branches:
+        - master
 
 env:
   NODE_VERSION: '15'
