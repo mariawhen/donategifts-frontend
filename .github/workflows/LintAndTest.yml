@@ -3,26 +3,28 @@
 name: Lint and Test
 
 on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+  types:
+      - assigned
+      - opened
+      - synchronize
+      - reopened
+      - ready_for_review
+    branches:
+      - master
+
+env:
+  NODE_VERSION: '15'
 
 jobs:
-  build:
-
-    runs-on: ubuntu-latest
+  LintAndText:
     if: github.event.pull_request.draft == false
-    strategy:
-      matrix:
-        node-version: [15.x]
-
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm ci
-    - run: npm run lint --if-present
-    - run: npm test --if-present
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run test
