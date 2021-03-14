@@ -6,6 +6,8 @@ task('cleanModules', () => del(['./node_modules', '**/node_modules'], { force: t
 
 task('cleanTmp', () => del(['**/tsconfig.tsbuildinfo'], { force: true, dot: true }));
 
+task('cleanCoverage', () => del(['./coverage'], { force: true, dot: true }));
+
 task('cleanNext', () =>
 	del(['**/dist'], {
 		force: true,
@@ -13,6 +15,6 @@ task('cleanNext', () =>
 	}),
 );
 
-exports.superclean = parallel('cleanNext', 'cleanTmp', 'cleanModules');
+exports.superclean = parallel('cleanNext', 'cleanTmp', 'cleanModules', 'cleanCoverage');
 
-exports.clean = parallel('cleanNext', 'cleanTmp');
+exports.clean = parallel('cleanNext', 'cleanTmp', 'cleanCoverage');

@@ -1,11 +1,11 @@
 import React from 'react';
-import NavBar from '@/Components/Layout/NavBar';
+import NavBar from '@/components/layout/NavBar';
 
 export default function Wishcard(): JSX.Element {
 	return (
 		<>
 			<NavBar />
-			<div>Read More Page</div>
+			<div>Wishcard detail page</div>
 		</>
 	);
 }

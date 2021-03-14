@@ -32,7 +32,7 @@ export default function Footer(): JSX.Element {
 			text: 'Community',
 		},
 		{
-			link: '/users/terms',
+			link: '/terms',
 			text: 'Terms',
 		},
 		{
@@ -42,11 +42,11 @@ export default function Footer(): JSX.Element {
 	];
 
 	return (
-		<div className="quick-font w-full bg-color-text-hover bg-color-dark p-6">
-			<p className="text-color-yellow p-2 text-lg flex justify-center">
+		<div className="quick-font w-full bg-primary bg-dark p-6">
+			<p className="text-yellow p-2 text-lg flex justify-center">
 				<i className="fa fa-heart mt-1" aria-hidden />
 				<a
-					href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=LA5DA2K2C8HLW"
+					href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LA5DA2K2C8HLW"
 					rel="noreferrer"
 					title="support our organization by paypal donation"
 					target="_blank"
@@ -57,7 +57,7 @@ export default function Footer(): JSX.Element {
 				<i className="fa fa-heart mt-1" aria-hidden />
 			</p>
 			<div className="flex flex-wrap justify-center">
-				<div className="text-color-white">
+				<div className="text-white">
 					<button type="button" className="px-2">
 						<a
 							href="https://www.instagram.com/donategifts/"
@@ -71,7 +71,7 @@ export default function Footer(): JSX.Element {
 					<span>|</span>
 				</div>
 				{breadCrumbs.map((item, index) => (
-					<div className="text-color-white" key="index">
+					<div className="text-white" key={item.text}>
 						<button type="button" className="px-2">
 							<Link href={item.link}>
 								<span className="hover:underline">{item.text}</span>
@@ -81,7 +81,7 @@ export default function Footer(): JSX.Element {
 					</div>
 				))}
 			</div>
-			<div className="text-color-white p-2 flex justify-center space-x-1">
+			<div className="text-white p-2 flex justify-center space-x-1">
 				<p>Donate Gifts Inc.</p>
 				<p>{new Date().getFullYear()}.</p>
 				<p>All rights reserverd</p>

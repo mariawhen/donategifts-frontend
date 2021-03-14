@@ -1,25 +1,50 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
 	purge: ['./components/**/*.{js,ts,jsx,tsx}', './pages/**/*.{js,ts,jsx,tsx}'],
 	darkMode: false, // or 'media' or 'class'
 	important: false,
 	separator: ':',
 	theme: {
-		extend: {},
+		extend: {
+			backgroundImage: (theme) => ({
+				authform: 'url("/assets/img/gift-white-bg.jpeg")',
+				mission: 'url("/assets/img/kid-yellow-bg.jpg")'
+			}),
+			transitionDuration: ['hover', 'focus'],
+		},
+		minHeight: {
+			4: '40vh'
+		},
+		boxShadow: {
+			mission: '20px 20px rgba(255, 187, 89, 1)'
+		},
 		colors: {
-			'color-text': '#343a40',
-			'color-text-hover': '#ff5c6f',
+			...defaultTheme.colors,
+			primary: '#343a40',
+			'primary-hover': '#ff5c6f',
 
-			'color-grey': '#9a9a9a',
-			'color-grey-light': '#d6d6d6',
+			blue: '#333a64',
 
-			'color-yellow': '#ffbb59',
-			'color-dark': '#313131',
+			grey: '#9a9a9a',
+			'grey-light': '#d6d6d6',
 
-			'color-white': '#fff',
-			transparent: 'transparent',
+			yellow: '#ffbb59',
+			dark: '#313131',
+
+			signup: '#FFC19C',
+			'signup-darker': '#f7cdb5',
+
+			error: '#FF0000',
+
+			'form-primary': '#FF5F6D',
+			'form-secondary': '#ffc371',
 		},
 		fontFamily: {
 			// default font-families, adapt to what we need
+			crayoncrumble: ['DK-Crayon-Crumble'],
+			crayoncool: ['DK-Cool-Crayon'],
+			quicksand: ['Quicksand'],
 			sans: [
 				'system-ui',
 				'BlinkMacSystemFont',
@@ -45,22 +70,22 @@ module.exports = {
 				'Liberation Serif',
 				'Georgia',
 				'serif',
-				'Quicksand'
 			],
 			mono: ['Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
 		},
 		fontSize: {
+			...defaultTheme.fontSize,
 			// set our font sizes here e.g. '2xs': '0.625rem'
-			'2xs': '',
-			xs: '',
-			sm: '',
-			base: '',
-			lg: '1.15em',
-			xl: '1.2em',
-			'2xl': '',
-			'3xl': '',
-			'4xl': '',
-			'5xl': '',
+			// '2xs': '',
+			// xs: '',
+			// sm: '',
+			// base: '',
+			// lg: '1.15em',
+			// xl: '1.2em',
+			// '2xl': '',
+			// '3xl': '',
+			// '4xl': '',
+			// '5xl': '',
 		},
 		borderColor: (theme) => ({
 			// apply our colors to border colors as well
@@ -83,7 +108,7 @@ module.exports = {
 		borderRadius: ['responsive'],
 		borderStyle: ['responsive'],
 		borderWidth: ['responsive'],
-		cursor: ['responsive'],
+		cursor: ['responsive', 'hover'],
 		display: ['responsive'],
 		flexDirection: ['responsive'],
 		flexWrap: ['responsive'],
