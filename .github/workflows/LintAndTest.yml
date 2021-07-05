@@ -26,7 +26,7 @@ jobs:
         uses: actions/setup-node@v2-beta
         with:
           node-version: ${{ env.NODE_VERSION }}
-      - run: npm ci
+      - run: npm install
       - run: npm run lint
 
   test:
@@ -38,5 +38,5 @@ jobs:
         uses: actions/setup-node@v2-beta
         with:
           node-version: ${{ env.NODE_VERSION }}
-      - run: npm ci
+      - run: npm install
       - run: npm run test
