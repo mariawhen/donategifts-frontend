@@ -6,7 +6,7 @@ import RegisterForm from '@/components/authentication/RegisterForm';
 afterEach(cleanup);
 
 describe('RegisterForm', () => {
-	it('should render without throwing an error', () => {
-		render(<RegisterForm modalDisplay={false} toggleModal={() => {}} />);
-	});
+  it('should render without throwing an error', () => {
+    render(<RegisterForm modalDisplay={false} toggleModal={() => {}} />);
+  });
 });

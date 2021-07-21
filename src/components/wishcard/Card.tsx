@@ -4,5 +4,5 @@
 import React from 'react';
 
 export default function Card(): JSX.Element {
-	return <div>Card</div>;
+  return <div>Card</div>;
 }

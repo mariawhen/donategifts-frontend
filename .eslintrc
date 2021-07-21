@@ -1,0 +1,145 @@
+{
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "prettier",
+    "@typescript-eslint",
+    "import",
+    "unicorn"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error"
+    ],
+    "max-len": 0,
+    "import/order": "error",
+    "import/first": "error",
+    "import/no-mutable-exports": "error",
+    "no-debugger": "error",
+    "no-console": [
+      "warn",
+      {
+        "allow": [
+          "warn",
+          "error"
+        ]
+      }
+    ],
+    "prefer-const": [
+      "error",
+      {
+        "destructuring": "any",
+        "ignoreReadBeforeAssign": false
+      }
+    ],
+    "no-lonely-if": "error",
+    "import/no-unresolved": "off",
+    "no-underscore-dangle": 0,
+    "object-curly-spacing": 0,
+    "prefer-object-spread": "error",
+    "no-plusplus": "warn",
+    "no-param-reassign": "warn",
+    "no-throw-literal": "warn",
+    "curly": [
+      "error",
+      "all"
+    ],
+    "dot-notation": "error",
+    "no-var": "error",
+    "object-shorthand": "error",
+    "no-useless-rename": "error",
+    "no-restricted-syntax": [
+      "error",
+      "ForInStatement",
+      "LabeledStatement",
+      "WithStatement"
+    ],
+    "require-atomic-updates": 0,
+    "no-await-in-loop": 0,
+    "class-methods-use-this": 0,
+    "no-useless-constructor": 0,
+    "import/prefer-default-export": 0,
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "args": "all",
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "@typescript-eslint/no-useless-constructor": 0,
+    "@typescript-eslint/no-parameter-properties": 0,
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "interface",
+        "format": [
+          "PascalCase"
+        ],
+        "prefix": [
+          "I"
+        ]
+      }
+    ],
+    "@typescript-eslint/interface-name-prefix": "off",
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/explicit-member-accessibility": 0,
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "mjs": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "unicorn/prevent-abbreviations": "off",
+    "unicorn/filename-case": "off",
+    "react/jsx-props-no-spreading": 0,
+    "react/jsx-indent-props": 0,
+    "react/jsx-indent": [
+      "error",
+      2
+    ],
+    "react/no-unused-prop-types": 0,
+    "react/destructuring-assignment": 0
+  },
+  "env": {
+    "jest": true,
+    "mocha": true,
+    "browser": true,
+    "node": true
+  },
+  "extends": [
+    "airbnb-typescript",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:unicorn/recommended",
+    "prettier"
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    },
+    "import/ignore": [
+      "node_modules",
+      "\\.(coffee|scss|css|less|hbs|svg|json)$"
+    ]
+  }
+}
