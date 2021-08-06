@@ -1,6 +1,9 @@
 name: Run build and test pipeline
 
 on:
+  push:
+    branches:
+      - master
   pull_request:
     types:
       - assigned
@@ -45,7 +48,7 @@ jobs:
         run: npm run build
 
       - name: Test
-        run: npm run coverage
+        run: npm run test:coverage
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1

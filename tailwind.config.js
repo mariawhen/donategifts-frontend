@@ -120,7 +120,7 @@ module.exports = {
 		flexGrow: ['responsive'],
 		flexShrink: ['responsive'],
 		float: ['responsive'],
-		fontFamily: false,
+		fontFamily: [],
 		fontWeight: ['responsive', 'hover', 'focus'],
 		height: ['responsive'],
 		lineHeight: ['responsive'],
