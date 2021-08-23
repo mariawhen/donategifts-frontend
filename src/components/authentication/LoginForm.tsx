@@ -13,7 +13,12 @@ import {
 import { FormInput } from './FormInput';
 
 export default function LoginForm(): JSX.Element {
-  const { register, handleSubmit, errors } = useForm({
+  const {
+    register,
+    handleSubmit,
+
+    formState: { errors },
+  } = useForm({
     resolver: loginResolver,
   });
 
@@ -41,16 +46,14 @@ export default function LoginForm(): JSX.Element {
 
         <FormInput
           type="text"
-          name="email"
-          ref={register}
+          {...register('email')}
           placeholder="Email/Username"
           errorMsg={errors.email?.message}
         />
 
         <FormInput
           type="password"
-          name="password"
-          ref={register}
+          {...register('password')}
           placeholder="Password"
           errorMsg={errors.password?.message}
         />

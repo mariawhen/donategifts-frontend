@@ -24,7 +24,12 @@ interface IRegisterFormProps {
 }
 
 export default function RegisterForm(props: IRegisterFormProps): JSX.Element {
-  const { register, handleSubmit, errors } = useForm({
+  const {
+    register,
+    handleSubmit,
+
+    formState: { errors },
+  } = useForm({
     resolver: registerResolver,
   });
   const router = useRouter();
@@ -58,40 +63,35 @@ export default function RegisterForm(props: IRegisterFormProps): JSX.Element {
 
         <FormInput
           type="text"
-          name="firstName"
-          ref={register}
+          {...register('firstName')}
           placeholder="First name"
           errorMsg={errors.firstName?.message}
         />
 
         <FormInput
           type="text"
-          name="lastName"
-          ref={register}
+          {...register('lastName')}
           placeholder="Last name"
           errorMsg={errors.lastName?.message}
         />
 
         <FormInput
           type="text"
-          name="email"
-          ref={register}
+          {...register('email')}
           placeholder="Email/Username"
           errorMsg={errors.email?.message}
         />
 
         <FormInput
           type="password"
-          name="password"
-          ref={register}
+          {...register('password')}
           placeholder="Password"
           errorMsg={errors.password?.message}
         />
 
         <FormInput
           type="password"
-          name="passwordConfirm"
-          ref={register}
+          {...register('passwordConfirm')}
           placeholder="Confirm Password"
           errorMsg={errors.passwordConfirm?.message}
         />
@@ -100,8 +100,7 @@ export default function RegisterForm(props: IRegisterFormProps): JSX.Element {
           <p className="text-2xl text-white">Signing up as:</p>
           <div className={radioContainerClass}>
             <input
-              name="userRole"
-              ref={register}
+              {...register('userRole')}
               type="radio"
               className={radioClass}
               value="donor"
@@ -110,8 +109,7 @@ export default function RegisterForm(props: IRegisterFormProps): JSX.Element {
           </div>
           <div className={radioContainerClass}>
             <input
-              name="userRole"
-              ref={register}
+              {...register('userRole')}
               type="radio"
               className={radioClass}
               value="agency"

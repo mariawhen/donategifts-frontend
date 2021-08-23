@@ -1,3 +1,4 @@
+
 name: Run build and test pipeline
 
 on:
@@ -37,7 +38,6 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
-
       - name: Install modules
         run: npm install
 

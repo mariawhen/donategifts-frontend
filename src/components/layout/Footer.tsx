@@ -1,43 +1,45 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import Link from 'next/link';
 import React from 'react';
+import { useTranslation } from 'next-i18next';
 
 export default function Footer(): JSX.Element {
+  const { t } = useTranslation('common');
   const breadCrumbs: {
     link: string;
     text: string;
   }[] = [
     {
       link: '/contact',
-      text: 'Contact Us',
+      text: t('common:contactUsHyperLink'),
     },
     {
       link: '/mission',
-      text: 'Mission',
+      text: t('common:missionHyperLink'),
     },
     {
       link: '/howto',
-      text: 'How it works',
+      text: t('common:howItWorksHyperLink'),
     },
     {
       link: '/team',
-      text: 'Who we are',
+      text: t('common:whoWeAreHyperLink'),
     },
     {
       link: '/wishcards',
-      text: 'Wish Cards',
+      text: t('common:wishCardsHyperLink'),
     },
     {
       link: '/community',
-      text: 'Community',
+      text: t('common:communityHyperLink'),
     },
     {
       link: '/terms',
-      text: 'Terms',
+      text: t('common:termsHyperLink'),
     },
     {
       link: '/faq',
-      text: 'FAQ',
+      text: t('common:faqHyperLink'),
     },
   ];
 
@@ -52,7 +54,7 @@ export default function Footer(): JSX.Element {
           target="_blank"
           className="mr-1 ml-1 hover:underline"
         >
-          <span>How To Support Our Cause</span>
+          <span>{t('common:supportOurCause')}</span>
         </a>
         <i className="fa fa-heart mt-1" aria-hidden />
       </p>
@@ -65,7 +67,7 @@ export default function Footer(): JSX.Element {
               rel="noreferrer"
               className="hover:underline"
             >
-              <span>Social Media</span>
+              <span>{t('common:socialMedia')}</span>
             </a>
           </button>
           <span>|</span>
@@ -84,7 +86,7 @@ export default function Footer(): JSX.Element {
       <div className="text-white p-2 flex justify-center space-x-1">
         <p>Donate Gifts Inc.</p>
         <p>{new Date().getFullYear()}.</p>
-        <p>All rights reserverd</p>
+        <p>{t('common:allRightsReserved')}</p>
       </div>
     </div>
   );

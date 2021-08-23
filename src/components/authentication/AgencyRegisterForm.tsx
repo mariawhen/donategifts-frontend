@@ -24,7 +24,13 @@ import {
 import { FormInput } from './FormInput';
 
 export default function AgencyRegisterForm(): JSX.Element {
-  const { register, handleSubmit, errors, control } = useForm({
+  const {
+    register,
+    handleSubmit,
+    control,
+
+    formState: { errors },
+  } = useForm({
     resolver: registerAgencyResolver,
   });
   const router = useRouter();
@@ -43,32 +49,28 @@ export default function AgencyRegisterForm(): JSX.Element {
 
         <FormInput
           type="text"
-          name="agencyName"
-          ref={register}
+          {...register('agencyName')}
           placeholder="Agency Name"
           errorMsg={errors.agencyName?.message}
         />
 
         <FormInput
           type="text"
-          name="agencyWebsite"
-          ref={register}
+          {...register('agencyWebsite')}
           placeholder="Agency Website (if any)"
           errorMsg={errors.agencyWebsite?.message}
         />
 
         <FormInput
           type="text"
-          name="address1"
-          ref={register}
+          {...register('address1')}
           placeholder="Agency Address Line 1"
           errorMsg={errors.address1?.message}
         />
 
         <FormInput
           type="text"
-          name="address2"
-          ref={register}
+          {...register('address2')}
           placeholder="Address Line 2"
           errorMsg={errors.address2?.message}
         />
@@ -76,8 +78,7 @@ export default function AgencyRegisterForm(): JSX.Element {
         <div className={cityStateZipContainerClass}>
           <FormInput
             type="text"
-            name="city"
-            ref={register}
+            {...register('city')}
             placeholder="City"
             errorMsg={errors.city?.message}
             containerClass={cityGroupClass}
@@ -85,8 +86,7 @@ export default function AgencyRegisterForm(): JSX.Element {
 
           <FormInput
             type="text"
-            name="state"
-            ref={register}
+            {...register('state')}
             placeholder="State"
             errorMsg={errors.state?.message}
             containerClass={stateGroupClass}
@@ -94,8 +94,7 @@ export default function AgencyRegisterForm(): JSX.Element {
 
           <FormInput
             type="text"
-            name="zipcode"
-            ref={register}
+            {...register('zipcode')}
             placeholder="Zipcode"
             errorMsg={errors.zipcode?.message}
             containerClass={zipcodeGroupClass}
@@ -105,8 +104,7 @@ export default function AgencyRegisterForm(): JSX.Element {
         <div className={countryPhoneContainerClass}>
           <FormInput
             type="text"
-            name="country"
-            ref={register}
+            {...register('country')}
             placeholder="Country"
             errorMsg={errors.country?.message}
             containerClass={countryGroupClass}
@@ -115,13 +113,15 @@ export default function AgencyRegisterForm(): JSX.Element {
           <div className={phoneGroupClass}>
             <div className={inputContainerClass}>
               <Controller
-                type="tel"
-                name="agencyPhone"
-                as={InputMask}
                 control={control}
-                placeholder="Phone Number: 123-456-7890"
-                mask="999-999-9999"
-                className={inputClass}
+                name="agencyPhone"
+                render={() => (
+                  <InputMask
+                    mask="999-999-9999"
+                    maskPlaceholder="Phone Number: 123-456-7890"
+                    className={inputClass}
+                  />
+                )}
               />
             </div>
             <p className={errorClass}>{errors.agencyPhone?.message}</p>
@@ -131,8 +131,7 @@ export default function AgencyRegisterForm(): JSX.Element {
         <div className={formGroupClass}>
           <div className={inputContainerClass}>
             <textarea
-              name="agencyBio"
-              ref={register}
+              {...register('agencyBio')}
               placeholder="Agency Description"
               className={agencyBioInputClass}
             />

@@ -1,12 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useTranslation } from 'next-i18next';
 
 function toggleMenu() {
   document.querySelector('#nav-content').classList.toggle('hidden');
 }
 
 export default function NavBar(): JSX.Element {
+  const { t } = useTranslation('common');
   const navItems: {
     style: string;
     items: {
@@ -18,23 +20,23 @@ export default function NavBar(): JSX.Element {
       'font-quicksand font-medium text-xl font-quicksand transition ease-in-out background-transparent px-3 py-1 outline-none focus:outline-none text-primary hover:text-primary-hover',
     items: [
       {
-        text: 'Wish Cards',
+        text: t('common:wishCardsHyperLink'),
         link: '/wishcards',
       },
       {
-        text: 'Mission',
+        text: t('common:missionHyperLink'),
         link: '/mission',
       },
       {
-        text: 'How To',
+        text: t('common:howToHyperLink'),
         link: '/howto',
       },
       {
-        text: 'Sign up',
+        text: t('common:signUpHyperLink'),
         link: '/signup',
       },
       {
-        text: 'Login',
+        text: t('common:loginHyperLink'),
         link: '/login',
       },
     ],

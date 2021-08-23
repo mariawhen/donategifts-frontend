@@ -7,9 +7,18 @@ import {
   AccordionItemPanel,
 } from 'react-accessible-accordion';
 // extended in globals.scss
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import 'react-accessible-accordion/dist/fancy-example.css';
 import { v4 as uuidv4 } from 'uuid';
 import BaseLayout from '@/components/layout/BaseLayout';
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common', 'mission'])),
+    },
+  };
+}
 
 export default function Faq(): JSX.Element {
   const faqItems: {

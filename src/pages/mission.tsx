@@ -1,15 +1,28 @@
 import React from 'react';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 import BaseLayout from '@/components/layout/BaseLayout';
 
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common', 'mission'])),
+    },
+  };
+}
+
 export default function Mission(): JSX.Element {
+  const { t } = useTranslation('mission');
+
   return (
     <BaseLayout pageTitle="Mission">
       <div className="flex items-center justify-center min-h-4 bg-mission bg-no-repeat bg-cover bg-center">
         <div className="text-center text-white">
-          <h1 className="text-6xl font-crayoncool uppercase">Our mission</h1>
+          <h1 className="text-6xl font-crayoncool uppercase">
+            {t('pageTitle')}
+          </h1>
           <h4 className="text-2xl font-quicksand font-bold">
-            Learn about our mission and commitment to making foster children
-            happy
+            {t('pageSubTitle')}
           </h4>
         </div>
       </div>
@@ -17,10 +30,10 @@ export default function Mission(): JSX.Element {
         <div className="lg:w-1/2 text-center flex justify-end items-center">
           <div className="lg:w-3/5 md:pr-4 sm:pl-4">
             <h3 className="font-crayoncool text-3xl font-light">
-              Bringing smiles to kids
+              {t('topSectionTitle')}
             </h3>
             <p className="font-bold font-quicksand mt-3">
-              Mission: Every child should feel valued, remembered, and loved.
+              {t('topSectionSubTitle')}
             </p>
             <p className="mt-3 font-quicksand font-light leading-8 text-justify">
               The DonateGifts project was founded and established in Chicago in
