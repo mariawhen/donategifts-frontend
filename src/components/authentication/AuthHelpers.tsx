@@ -1,5 +1,10 @@
 import { object, string } from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
+import {
+  IAuthResponse,
+  loginUserWithFireBase,
+  registerUserWithFireBase,
+} from './AuthApi';
 
 const registerFormSchema = object().shape({
   firstName: string().required('First Name is required'),
@@ -98,3 +103,33 @@ export const countryPhoneContainerClass =
 export const countryGroupClass = `${formGroupClass} md:w-1/2`;
 export const phoneGroupClass = `${formGroupClass} md:w-1/2`;
 export const agencyBioInputClass = `${inputClass} h-44`;
+
+export const registerSubmitBtnClick = async (data: {
+  email: string;
+  password: string;
+}): Promise<IAuthResponse> => {
+  // regular user: firebase register (fetches token/error), call backend to store reg user if token
+  // agency user: firebase register (fetches token/error), call backend to store agency user if token
+  // return token/error
+  let result = { token: '' };
+  try {
+    result = await registerUserWithFireBase(data);
+  } catch (error) {
+    alert(error);
+  }
+  return result;
+};
+
+export const loginSubmitBtnClick = async (data: {
+  email: string;
+  password: string;
+}): Promise<IAuthResponse> => {
+  // call firebase login (fetches token/error), get and return token/error
+  let result = { token: '' };
+  try {
+    result = await loginUserWithFireBase(data);
+  } catch (error) {
+    alert(error);
+  }
+  return result;
+};

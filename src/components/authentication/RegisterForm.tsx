@@ -15,6 +15,7 @@ import {
   radioClass,
   radioContainerClass,
   radioLabelContainer,
+  registerSubmitBtnClick,
 } from './AuthHelpers';
 import { FormInput } from './FormInput';
 
@@ -34,14 +35,20 @@ export default function RegisterForm(props: IRegisterFormProps): JSX.Element {
   });
   const router = useRouter();
 
-  const onSubmit = (data: { userRole: string }) => {
-    const { userRole } = data;
+  const onSubmit = (data: {
+    userRole: string;
+    email: string;
+    password: string;
+  }) => {
+    const { userRole, email, password } = data;
 
     console.log(data);
 
     if (userRole === 'agency') {
       router.push('/');
     }
+
+    registerSubmitBtnClick({ email, password });
   };
 
   return (
