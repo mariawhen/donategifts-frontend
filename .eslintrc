@@ -106,10 +106,8 @@
     "unicorn/filename-case": "off",
     "react/jsx-props-no-spreading": 0,
     "react/jsx-indent-props": 0,
-    "react/jsx-indent": [
-      "error",
-      2
-    ],
+    "react/jsx-filename-extension": "off",
+    "react/jsx-indent": "off",
     "react/no-unused-prop-types": 0,
     "react/destructuring-assignment": 0
   },
@@ -128,7 +126,12 @@
   ],
   "settings": {
     "import/parsers": {
-      "@typescript-eslint/parser": [".ts", ".tsx", ".js", ".jsx"]
+      "@typescript-eslint/parser": [
+        ".ts",
+        ".tsx",
+        ".js",
+        ".jsx"
+      ]
     },
     "import/resolver": {
       "typescript": {
