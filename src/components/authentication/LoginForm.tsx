@@ -9,6 +9,7 @@ import {
   OrClass,
   submitBtnClass,
   authBtnClass,
+  loginSubmitBtnClick,
 } from './AuthHelpers';
 import { FormInput } from './FormInput';
 
@@ -25,6 +26,7 @@ export default function LoginForm(): JSX.Element {
   // eslint-disable-next-line unicorn/consistent-function-scoping
   const onSubmit = (data) => {
     console.log(data);
+    loginSubmitBtnClick(data);
   };
 
   return (
