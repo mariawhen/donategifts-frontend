@@ -21,15 +21,15 @@ export async function registerUserWithFireBase(data: {
   email: string;
   password: string;
 }): Promise<IAuthResponse> {
-  const { email } = data;
-  const { password } = data;
-  let token = '';
+  const { email, password } = data;
   try {
+    let token = '';
     const result = await firebase
       .auth()
       .createUserWithEmailAndPassword(email, password);
     console.log('user created');
     token = await result.user.getIdToken();
+    return { token };
   } catch (error) {
     const errorCode = error.code;
     let errorMessage = error.message;
@@ -39,21 +39,20 @@ export async function registerUserWithFireBase(data: {
     console.log(error);
     throw new Error(errorMessage);
   }
-  return { token };
 }
 
 export async function loginUserWithFireBase(data: {
   email: string;
   password: string;
 }): Promise<IAuthResponse> {
-  const { email } = data;
-  const { password } = data;
-  let token = '';
+  const { email, password } = data;
   try {
+    let token = '';
     const result = await firebase
       .auth()
       .signInWithEmailAndPassword(email, password);
     token = await result.user.getIdToken();
+    return { token };
   } catch (error) {
     const errorCode = error.code;
     let errorMessage = error.message;
@@ -63,5 +62,4 @@ export async function loginUserWithFireBase(data: {
     console.log(error);
     throw new Error(errorMessage);
   }
-  return { token };
 }
