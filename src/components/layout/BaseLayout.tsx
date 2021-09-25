@@ -28,6 +28,7 @@ export default function BaseLayout({
           src="https://kit.fontawesome.com/7a735561bb.js"
           crossOrigin="anonymous"
         />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <title>{pageTitle}</title>
       </Head>
 

@@ -71,6 +71,7 @@ html {
   }
 }
 
+// -------------global fonts--------------------------
 @font-face {
   font-family: 'DK-Crayon-Crumble';
   font-weight: 400;
@@ -82,4 +83,59 @@ html {
   font-family: 'DK-Cool-Crayon';
   font-weight: 400;
   src: url('../../public/assets/fonts/dkcoolcrayon-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  font-weight: 300, 400, 600;
+  src: url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap');
+}
+
+.cool-font {
+  font-family: 'DK-Cool-Crayon';
+}
+
+.quick-font {
+  font-family: 'Quicksand';
+}
+
+// -------------our new color scheme--------------------------
+.bg-blue {
+  background-color: #455564;
+}
+
+.color-blue {
+  color: #455564;
+}
+
+.bg-red {
+  background-color: #BF6B63;
+}
+
+.color-red {
+  color: #BF6B63;
+}
+
+.bg-org {
+  background-color: #EB9E67;
+}
+
+.color-org {
+  color: #EB9E67;
+}
+
+.bg-yel {
+  background-color: #EABF62;
+}
+
+.color-yel {
+  color: #EABF62;
+}
+
+.bg-cream {
+  background-color: #F2EFE6;
+}
+
+.color-cream {
+  color: #F2EFE6;
 }
