@@ -101,47 +101,47 @@ html {
 
 // -------------our new color scheme--------------------------
 .dg-bg-blue {
-  background-color: #333A64;
+  background-color: #333a64;
 }
 
 .dg-color-blue {
-  color: #333A64;
+  color: #333a64;
 }
 
 .dg-bg-red {
-  background-color: #BF6B63;
+  background-color: #bf6b63;
 }
 
 .dg-color-red {
-  color: #BF6B63;
+  color: #bf6b63;
 }
 
 .dg-bg-org {
-  background-color: #EB9E67;
+  background-color: #eb9e67;
 }
 
 .dg-color-org {
-  color: #EB9E67;
+  color: #eb9e67;
 }
 
 .dg-bg-yel {
-  background-color: #EABF62;
+  background-color: #ffbb59;
+}
+
+.dg-bg-yel-80 {
+  background-color: rgba(255, 187, 89, 0.8);
 }
 
 .dg-color-yel {
-  color: #EABF62;
+  color: #ffbb59;
 }
 
 .dg-bg-cream {
-  background-color: #FFF6ED;
+  background-color: #fff6ed;
 }
 
 .dg-color-cream {
-  color: #FFF6ED;
-}
-
-.rel { 
-  position: relative;
+  color: #fff6ed;
 }
 
 .top-right {
@@ -151,9 +151,9 @@ html {
 }
 
 .dg-bg-howto {
-  background-image: url("../../public/assets/img/new-floating-deco-1.svg");
+  background-image: url('../../public/assets/img/new-floating-deco-1.svg');
   // background-image: url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=8");
   // width: 100%;
   height: 20rem;
-  background-color: #FFF6ED;
+  background-color: #fff6ed;
 }
