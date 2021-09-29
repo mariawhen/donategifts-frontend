@@ -43,9 +43,9 @@ module.exports = {
 		},
 		fontFamily: {
 			// default font-families, adapt to what we need
-			crayoncrumble: ['DK-Crayon-Crumble'],
-			crayoncool: ['DK-Cool-Crayon'],
-			quicksand: ['Quicksand'],
+			crayon: ['DK-Crayon-Crumble'],
+			cool: ['DK-Cool-Crayon'],
+			quick: ['Quicksand'],
 			sans: [
 				'system-ui',
 				'BlinkMacSystemFont',

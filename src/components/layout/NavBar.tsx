@@ -17,7 +17,7 @@ export default function NavBar(): JSX.Element {
     }[];
   } = {
     style:
-      'font-quicksand font-medium text-xl font-quicksand transition ease-in-out background-transparent px-3 py-1 outline-none focus:outline-none text-primary hover:text-primary-hover',
+      'font-quick font-medium text-lg transition ease-in-out background-transparent px-3 py-1 outline-none focus:outline-none text-primary hover:text-primary-hover',
     items: [
       {
         text: t('common:wishCardsHyperLink'),

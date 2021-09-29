@@ -87,17 +87,10 @@ html {
 
 @font-face {
   font-family: 'Quicksand';
-  font-weight: 300, 400, 600;
-  src: url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap');
+  font-weight: 300, 400, 500, 600;
+  src: url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap');
 }
 
-.cool-font {
-  font-family: 'DK-Cool-Crayon';
-}
-
-.quick-font {
-  font-family: 'Quicksand';
-}
 
 // -------------our new color scheme--------------------------
 .dg-bg-blue {
@@ -160,8 +153,6 @@ html {
 
 .dg-bg-howto {
   background-image: url('../../public/assets/img/new-floating-deco-1.svg');
-  // background-image: url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=8");
-  // width: 100%;
   height: 20rem;
   background-color: #fff6ed;
 }

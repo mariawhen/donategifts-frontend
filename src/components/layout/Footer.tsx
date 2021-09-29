@@ -43,7 +43,7 @@ export default function Footer(): JSX.Element {
   ];
 
   return (
-    <div className="quick-font w-full bg-primary bg-dark p-6">
+    <div className="font-quick w-full bg-primary bg-dark p-6">
       <p className="text-yellow p-2 text-lg flex justify-center">
         <i className="fa fa-heart mt-1" aria-hidden />
         <a
