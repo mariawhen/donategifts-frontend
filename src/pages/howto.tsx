@@ -1,5 +1,6 @@
 import React from 'react';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import useTranslation from 'next-i18next';
 import Image from 'next/image';
 // import css from '../styles/howTo.module.scss';
 import howToCheckOut from '../../public/assets/img/howto-checkout.svg';
@@ -18,6 +19,7 @@ export async function getStaticProps({ locale }) {
 }
 
 export default function Howto(): JSX.Element {
+  const { t } = useTranslation('common');
   return (
     <BaseLayout pageTitle="How does Donategifts work?">
       <header>
