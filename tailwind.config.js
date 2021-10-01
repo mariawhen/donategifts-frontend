@@ -1,7 +1,8 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
-	purge: ['./components/**/*.{js,ts,jsx,tsx}', './pages/**/*.{js,ts,jsx,tsx}'],
+	mode: 'jit',
+	purge: ['./src/**/*.{js,ts,jsx,tsx}'],
 	darkMode: false, // or 'media' or 'class'
 	important: false,
 	separator: ':',
@@ -42,9 +43,9 @@ module.exports = {
 		},
 		fontFamily: {
 			// default font-families, adapt to what we need
-			crayoncrumble: ['DK-Crayon-Crumble'],
-			crayoncool: ['DK-Cool-Crayon'],
-			quicksand: ['Quicksand'],
+			crayon: ['DK-Crayon-Crumble'],
+			cool: ['DK-Cool-Crayon'],
+			quick: ['Quicksand'],
 			sans: [
 				'system-ui',
 				'BlinkMacSystemFont',

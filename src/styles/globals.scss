@@ -71,6 +71,7 @@ html {
   }
 }
 
+// -------------global fonts--------------------------
 @font-face {
   font-family: 'DK-Crayon-Crumble';
   font-weight: 400;
@@ -82,4 +83,76 @@ html {
   font-family: 'DK-Cool-Crayon';
   font-weight: 400;
   src: url('../../public/assets/fonts/dkcoolcrayon-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  font-weight: 300, 400, 500, 600;
+  src: url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap');
+}
+
+
+// -------------our new color scheme--------------------------
+.dg-bg-blue {
+  background-color: #333a64;
+}
+
+.dg-color-blue {
+  color: #333a64;
+}
+
+.dg-color-grn {
+  color: #173A24;
+}
+
+.dg-bg-grn {
+  color: #173A24;
+}
+
+.dg-bg-red {
+  background-color: #bf6b63;
+}
+
+.dg-color-red {
+  color: #bf6b63;
+}
+
+.dg-bg-org {
+  background-color: #eb9e67;
+}
+
+.dg-color-org {
+  color: #eb9e67;
+}
+
+.dg-bg-yel {
+  background-color: #ffbb59;
+}
+
+.dg-bg-yel-80 {
+  background-color: rgba(255, 187, 89, 0.7);
+}
+
+.dg-color-yel {
+  color: #ffbb59;
+}
+
+.dg-bg-cream {
+  background-color: #fff6ed;
+}
+
+.dg-color-cream {
+  color: #fff6ed;
+}
+
+.top-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.dg-bg-howto {
+  background-image: url('../../public/assets/img/new-floating-deco-1.svg');
+  height: 20rem;
+  background-color: #fff6ed;
 }
