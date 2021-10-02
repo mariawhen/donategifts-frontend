@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "../Components/index.scss";
+
 * {
   box-sizing: border-box;
 }
